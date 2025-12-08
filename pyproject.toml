@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kinetic_defense_sim"
+version = "1.0.0"
+description = "High-fidelity physics simulation of kinetic defense interception"
+authors = [{name = "muhkartal"}]
+dependencies = [
+    "numpy>=1.24.0",
+    "scipy>=1.10.0",
+    "matplotlib>=3.7.0"
+]
+requires-python = ">=3.10"
