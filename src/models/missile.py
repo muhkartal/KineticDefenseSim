@@ -14,6 +14,14 @@ class Missile6DOF:
         self.fuel_mass = mass_props.get('fuel', 0.0)
         self.history = []
 
+    @property
+    def position(self) -> np.ndarray:
+        return self.state[0:3]
+
+    @property
+    def velocity(self) -> np.ndarray:
+        return self.state[3:6]
+
     def equations_of_motion(self, t, state, wind_func, thrust_func, fin_func):
         pos = state[0:3]
         vel_body = state[3:6]
